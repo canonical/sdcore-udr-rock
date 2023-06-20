@@ -1,0 +1,19 @@
+name: sdcore-udr
+base: ubuntu:22.04
+version: '1.3'
+summary: SD-Core UDR
+description: SD-Core UDR
+license: Apache-2.0
+platforms:
+  amd64:
+
+parts:
+  udr:
+    plugin: go
+    source: https://github.com/omec-project/udr.git
+    source-type: git
+    source-commit: 35eb7b763feff22dc9766b6ce6e3a23ea8151759
+    build-snaps:
+      - go/1.18/stable
+    organize:
+      bin/cmd: bin/udr
