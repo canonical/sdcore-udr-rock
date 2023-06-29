@@ -1,5 +1,6 @@
 name: sdcore-udr
-base: ubuntu:22.04
+base: bare
+build-base: ubuntu:22.04
 version: '1.3'
 summary: SD-Core UDR
 description: SD-Core UDR
@@ -15,5 +16,7 @@ parts:
     source-commit: 35eb7b763feff22dc9766b6ce6e3a23ea8151759
     build-snaps:
       - go/1.18/stable
+    stage-packages:
+      - libc6_libs
     organize:
       bin/cmd: bin/udr
