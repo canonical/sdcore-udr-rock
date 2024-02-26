@@ -14,7 +14,7 @@ parts:
     plugin: go
     source: https://github.com/omec-project/udr.git
     source-type: git
-    source-commit: 653cefd60a464c3e9ea898657837331ef3ebc1aa
+    source-commit: 71d8b3e516fd502fc33a9a6ab3dce16987f3a88e
     build-snaps:
       - go/1.21/stable
     stage-packages:
