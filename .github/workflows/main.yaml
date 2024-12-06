@@ -1,14 +1,10 @@
-name: Main
+name: Release v1.6.1 CI
 
 on:
   pull_request:
     branches:
-      - main
+      - v1.6.1
   push:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * 0'
 
 jobs:
 
@@ -20,6 +16,6 @@ jobs:
     uses: canonical/sdcore-github-workflows/.github/workflows/scan-rock.yaml@v2.3.0
 
   publish-rock:
-    if: github.ref_name == 'main'
+    if: github.ref_name == 'v1.6.1'
     needs: scan-rock
     uses: canonical/sdcore-github-workflows/.github/workflows/publish-rock.yaml@v2.3.0
