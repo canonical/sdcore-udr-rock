@@ -6,6 +6,10 @@ on:
     branches:
       - main
       - v**
+  push:
+    branches:
+      - main
+      - v**
   schedule:
     - cron: '0 0 * * 0'
 
