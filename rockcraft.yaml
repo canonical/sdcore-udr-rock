@@ -1,7 +1,7 @@
 name: sdcore-udr
 base: bare
 build-base: ubuntu@24.04
-version: '1.6.1'
+version: '1.6.2'
 summary: SD-Core UDR
 description: SD-Core UDR
 license: Apache-2.0
@@ -16,7 +16,7 @@ parts:
     source-type: git
     source-tag: v${CRAFT_PROJECT_VERSION}
     build-snaps:
-      - go/1.21/stable
+      - go/1.23/stable
     stage-packages:
       - libc6_libs
       - base-files_lib
