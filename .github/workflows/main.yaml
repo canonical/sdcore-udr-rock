@@ -10,13 +10,13 @@ on:
 jobs:
 
   build-rock:
-    uses: canonical/sdcore-github-workflows/.github/workflows/build-rock.yaml@v2.3.3
+    uses: canonical/sdcore-github-workflows/.github/workflows/build-rock.yaml@v2.3.5
 
   scan-rock:
     needs: build-rock
-    uses: canonical/sdcore-github-workflows/.github/workflows/scan-rock.yaml@v2.3.3
+    uses: canonical/sdcore-github-workflows/.github/workflows/scan-rock.yaml@v2.3.5
 
   publish-rock:
     if: github.ref_name == 'v1.6.1'
     needs: scan-rock
-    uses: canonical/sdcore-github-workflows/.github/workflows/publish-rock.yaml@v2.3.3
+    uses: canonical/sdcore-github-workflows/.github/workflows/publish-rock.yaml@v2.3.5
